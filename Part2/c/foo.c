@@ -8,9 +8,9 @@ pthread_mutex_t mutex;
 void* incrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++) {
 	// TODO: sync access to i
-	pthread_mutex_lock(&mutex)
+	pthread_mutex_lock(&mutex);
 	i++;
-	pthread_mutex_unlock(&mutex)
+	pthread_mutex_unlock(&mutex);
     }
     return NULL;
 }
@@ -18,9 +18,9 @@ void* incrementingThreadFunction(){
 void* decrementingThreadFunction(){
     for (int j = 0; j < 1000000; j++) {
 	// TODO: sync access to i
-	pthread_mutex_lock(&mutex)
+	pthread_mutex_lock(&mutex);
 	i--;
-	pthread_mutex_unlock(&mutex)
+	pthread_mutex_unlock(&mutex);
     }
     return NULL;
 }
